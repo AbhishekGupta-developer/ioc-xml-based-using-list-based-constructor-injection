@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <!-- Question Bean Definition -->
+    <bean id="question" class="com.myorganisation.iocusinglistbasedconstructorinjection.model.Question">
+        <constructor-arg value="1" type="Integer"></constructor-arg>
+        <constructor-arg value="What is Java?" type="String"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Java is a High level programming language.</value>
+                <value>Java is an Object Oriented programming language.</value>
+                <value>Java is a Statically typed programming language.</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
