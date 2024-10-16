@@ -15,7 +15,56 @@
                 <value>Java is a High level programming language.</value>
                 <value>Java is an Object Oriented programming language.</value>
                 <value>Java is a Statically typed programming language.</value>
+                <value>Java is a Statically typed programming language.</value>
             </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- MCQ Bean Definition -->
+    <bean id="mcq" class="com.myorganisation.iocusinglistbasedconstructorinjection.model.MCQ">
+        <constructor-arg value="2" type="Integer"></constructor-arg>
+        <constructor-arg value="What is OOPs?" type="String"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Option A</value>
+                <value>Option B</value>
+                <value>Option C</value>
+                <value>Option B</value> <!-- Set does not allow duplicates. -->
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Problem Bean Definition -->
+    <bean id="problem" class="com.myorganisation.iocusinglistbasedconstructorinjection.model.Problem">
+        <constructor-arg value="3" type="Integer"></constructor-arg>
+        <constructor-arg value="What is the problem?" type="String"></constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry>
+                    <key>
+                        <value>1</value>
+                    </key>
+                    <value>Option A</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>2</value>
+                    </key>
+                    <value>Option B</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>3</value>
+                    </key>
+                    <value>Option C</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>4</value>
+                    </key>
+                    <value>Option D</value>
+                </entry>
+            </map>
         </constructor-arg>
     </bean>
 
